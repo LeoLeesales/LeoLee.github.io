@@ -3,92 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PE保护膜-青岛容顺新材料有限公司</title>
+    <title>PE保护膜-青岛容顺新材料有限公司 | Rongshun New Materials</title>
+    <!-- 引入外部样式和JS（轮播/图标） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 全局样式 */
+        /* 全局样式重置 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, "Microsoft YaHei", sans-serif;
+            font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+        }
+        :root {
+            --primary-color: #1e88e5;
+            --secondary-color: #263238;
+            --light-color: #f5f7fa;
+            --gray-color: #757575;
+            --white-color: #ffffff;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         body {
-            color: #333;
-            line-height: 1.6;
+            color: var(--secondary-color);
+            line-height: 1.7;
+            background-color: var(--light-color);
         }
-        /* 导航栏 */
-        header {
-            background: #2c3e50;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
         }
-        .nav-container {
+        ul {
+            list-style: none;
+        }
+        .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #1565c0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        .section-title p {
+            color: var(--gray-color);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* 语言切换 */
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        .lang-switch button {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            padding: 5px 15px;
+            margin-left: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+        .lang-switch button.active {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+        }
+
+        /* 导航栏 */
+        header {
+            background-color: var(--white-color);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 15px 0;
         }
         .logo {
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
+            display: flex;
+            align-items: center;
         }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        .logo h1 {
+            font-size: 22px;
+            color: var(--secondary-color);
+        }
+        .logo h1 span {
+            color: var(--primary-color);
+        }
+        /* 多级菜单 */
+        .main-menu {
+            display: flex;
+            position: relative;
+        }
+        .main-menu > li {
+            position: relative;
+            margin-left: 30px;
+        }
+        .main-menu > li > a {
             font-size: 16px;
+            font-weight: 500;
+            padding: 10px 0;
+            display: block;
         }
-        .nav-links a:hover {
-            color: #3498db;
+        .main-menu > li > a:hover {
+            color: var(--primary-color);
         }
-        /* 横幅 */
-        .banner {
-            background: #f5f5f5;
-            padding: 60px 0;
-            text-align: center;
+        /* 下拉菜单 */
+        .submenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--white-color);
+            box-shadow: var(--shadow);
+            width: 200px;
+            padding: 15px 0;
+            border-radius: 4px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
         }
-        .banner h1 {
-            font-size: 36px;
-            color: #2c3e50;
-            margin-bottom: 20px;
+        .main-menu > li:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
         }
-        .banner p {
-            font-size: 18px;
-            color: #666;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        /* 容器 */
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
+        .submenu li {
             padding: 0 20px;
         }
-        /* 公司介绍 */
-        .about {
-            margin-bottom: 60px;
+        .submenu li a {
+            padding: 8px 0;
+            display: block;
+            font-size: 14px;
+            color: var(--gray-color);
         }
-        .about h2, .products h2, .contact h2 {
-            font-size: 28px;
-            color: #2c3e50;
+        .submenu li a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        /* 移动端菜单按钮 */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* 轮播Banner */
+        .banner {
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        .banner-slide.active {
+            opacity: 1;
+        }
+        .banner-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .banner-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: var(--white-color);
+            z-index: 10;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        .banner-content h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .banner-content p {
+            font-size: 18px;
             margin-bottom: 30px;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            display: inline-block;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
-        .about p {
-            font-size: 16px;
-            margin-bottom: 15px;
+        .banner-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .banner-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .banner-dot.active {
+            background-color: var(--primary-color);
+        }
+
+        /* 关于我们 */
+        .about {
+            padding: 80px 0;
+            background-color: var(--white-color);
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .about-img img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--gray-color);
             line-height: 1.8;
         }
+
         /* 产品展示 */
         .products {
-            margin-bottom: 60px;
+            padding: 80px 0;
         }
         .product-grid {
             display: grid;
@@ -96,145 +288,949 @@
             gap: 30px;
         }
         .product-card {
-            background: white;
-            border: 1px solid #eee;
+            background-color: var(--white-color);
             border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
         }
         .product-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
         }
-        .product-card h3 {
-            color: #2c3e50;
+        .product-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .product-card:hover .product-img img {
+            transform: scale(1.1);
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-info h3 {
             font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        .product-info p {
+            color: var(--gray-color);
             margin-bottom: 15px;
+            font-size: 14px;
         }
-        .product-card p {
-            color: #666;
-            font-size: 15px;
+        .product-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
         }
+        .product-tag {
+            font-size: 12px;
+            padding: 3px 10px;
+            background-color: var(--light-color);
+            border-radius: 20px;
+            color: var(--primary-color);
+        }
+
+        /* 工厂展示 */
+        .factory {
+            padding: 80px 0;
+            background-color: var(--white-color);
+        }
+        .factory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .factory-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        .factory-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
         /* 联系方式 */
         .contact {
-            background: #f9f9f9;
-            padding: 40px 20px;
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .contact-info {
+            background-color: var(--white-color);
+            padding: 30px;
             border-radius: 8px;
+            box-shadow: var(--shadow);
         }
-        .contact p {
-            font-size: 18px;
-            margin-bottom: 10px;
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
         }
-        .contact a {
-            color: #3498db;
-            text-decoration: none;
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
         }
-        .contact a:hover {
-            text-decoration: underline;
+        .contact-item i {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
         }
+        .contact-item p {
+            color: var(--gray-color);
+        }
+        .contact-item a {
+            color: var(--primary-color);
+        }
+        .contact-form {
+            background-color: var(--white-color);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        .contact-form h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        .form-group textarea {
+            height: 150px;
+            resize: none;
+        }
+
         /* 页脚 */
         footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 60px;
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+            padding: 60px 0 20px;
         }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        .footer-col p {
+            color: #ccc;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            color: #ccc;
+            font-size: 14px;
+        }
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+            color: #ccc;
+        }
+
         /* 响应式适配 */
+        @media (max-width: 992px) {
+            .about-content, .contact-content {
+                grid-template-columns: 1fr;
+            }
+            .banner-content h2 {
+                font-size: 36px;
+            }
+        }
         @media (max-width: 768px) {
-            .banner h1 {
+            .menu-toggle {
+                display: block;
+            }
+            .main-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--white-color);
+                flex-direction: column;
+                box-shadow: var(--shadow);
+                padding: 20px;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+            .main-menu.active {
+                opacity: 1;
+                visibility: visible;
+            }
+            .main-menu > li {
+                margin: 0;
+                border-bottom: 1px solid #eee;
+            }
+            .main-menu > li:last-child {
+                border-bottom: none;
+            }
+            .submenu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                box-shadow: none;
+                width: 100%;
+                padding: 0 20px;
+                display: none;
+            }
+            .main-menu > li:hover .submenu {
+                display: block;
+            }
+            .banner {
+                height: 400px;
+            }
+            .banner-content h2 {
                 font-size: 28px;
             }
-            .nav-links {
-                display: none;
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+        @media (max-width: 576px) {
+            .banner {
+                height: 300px;
+            }
+            .banner-content h2 {
+                font-size: 24px;
+            }
+            .banner-content p {
+                font-size: 16px;
             }
             .product-grid {
                 grid-template-columns: 1fr;
             }
         }
+
+        /* 双语内容隐藏/显示 */
+        .cn-content {
+            display: block;
+        }
+        .en-content {
+            display: none;
+        }
+        body.en .cn-content {
+            display: none;
+        }
+        body.en .en-content {
+            display: block;
+        }
     </style>
 </head>
 <body>
+    <!-- 语言切换 -->
+    <div class="lang-switch">
+        <button class="cn-btn active" onclick="switchLang('cn')">中文</button>
+        <button class="en-btn" onclick="switchLang('en')">English</button>
+    </div>
+
     <!-- 导航栏 -->
     <header>
-        <div class="nav-container">
-            <div class="logo">Rongshun New Materials</div>
-            <div class="nav-links">
-                <a href="#home">首页</a>
-                <a href="#about">公司介绍</a>
-                <a href="#products">产品中心</a>
-                <a href="#contact">联系我们</a>
-            </div>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="https://picsum.photos/id/28/50/50" alt="容顺新材料LOGO">
+                    <h1>
+                        <span class="cn-content">容顺新材料</span>
+                        <span class="en-content">Rongshun New Materials</span>
+                    </h1>
+                </div>
+                <!-- 移动端菜单按钮 -->
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <!-- 多级导航菜单 -->
+                <ul class="main-menu" id="mainMenu">
+                    <li>
+                        <a href="#home">
+                            <span class="cn-content">首页</span>
+                            <span class="en-content">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <span class="cn-content">关于我们</span>
+                            <span class="en-content">About Us</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#products">
+                            <span class="cn-content">产品中心</span>
+                            <span class="en-content">Products</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#stainless-steel">
+                                <span class="cn-content">不锈钢板保护膜</span>
+                                <span class="en-content">Stainless Steel Film</span>
+                            </a></li>
+                            <li><a href="#upvc-profile">
+                                <span class="cn-content">uPVC型材保护膜</span>
+                                <span class="en-content">uPVC Profile Film</span>
+                            </a></li>
+                            <li><a href="#glass-film">
+                                <span class="cn-content">窗户玻璃保护膜</span>
+                                <span class="en-content">Window Glass Film</span>
+                            </a></li>
+                            <li><a href="#carpet-film">
+                                <span class="cn-content">地毯保护膜</span>
+                                <span class="en-content">Carpet Protection Film</span>
+                            </a></li>
+                            <li><a href="#custom-film">
+                                <span class="cn-content">定制保护膜</span>
+                                <span class="en-content">Custom Film</span>
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#factory">
+                            <span class="cn-content">工厂展示</span>
+                            <span class="en-content">Factory</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <span class="cn-content">联系我们</span>
+                            <span class="en-content">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- 横幅 -->
+    <!-- 轮播Banner -->
     <section class="banner" id="home">
-        <h1>专业PE保护膜生产厂家</h1>
-        <p>青岛容顺新材料有限公司 | 专注不锈钢板/UPVC型材/玻璃/地毯等表面保护解决方案</p>
+        <!-- 轮播图1 -->
+        <div class="banner-slide active">
+            <img src="https://picsum.photos/id/180/1920/600" alt="PE保护膜工厂">
+            <div class="banner-content">
+                <h2>
+                    <span class="cn-content">专业PE保护膜生产厂家</span>
+                    <span class="en-content">Professional PE Protective Film Manufacturer</span>
+                </h2>
+                <p>
+                    <span class="cn-content">专注表面保护解决方案，工厂直供，品质保障</span>
+                    <span class="en-content">Focus on surface protection solutions, factory direct supply, quality assurance</span>
+                </p>
+                <a href="#contact" class="btn">
+                    <span class="cn-content">立即咨询</span>
+                    <span class="en-content">Contact Us Now</span>
+                </a>
+            </div>
+        </div>
+        <!-- 轮播图2 -->
+        <div class="banner-slide">
+            <img src="https://picsum.photos/id/20/1920/600" alt="PE保护膜产品">
+            <div class="banner-content">
+                <h2>
+                    <span class="cn-content">全品类PE保护膜定制</span>
+                    <span class="en-content">Full Range of PE Film Customization</span>
+                </h2>
+                <p>
+                    <span class="cn-content">不锈钢/型材/玻璃/地毯等多场景适用</span>
+                    <span class="en-content">Suitable for stainless steel, profile, glass, carpet and other scenarios</span>
+                </p>
+                <a href="#products" class="btn">
+                    <span class="cn-content">查看产品</span>
+                    <span class="en-content">View Products</span>
+                </a>
+            </div>
+        </div>
+        <!-- 轮播图3 -->
+        <div class="banner-slide">
+            <img src="https://picsum.photos/id/118/1920/600" alt="外贸出口">
+            <div class="banner-content">
+                <h2>
+                    <span class="cn-content">支持外贸出口 全球发货</span>
+                    <span class="en-content">Support Export & Global Shipping</span>
+                </h2>
+                <p>
+                    <span class="cn-content">定制化服务，满足不同国家客户需求</span>
+                    <span class="en-content">Customized services to meet the needs of customers in different countries</span>
+                </p>
+                <a href="#contact" class="btn">
+                    <span class="cn-content">洽谈合作</span>
+                    <span class="en-content">Cooperation</span>
+                </a>
+            </div>
+        </div>
+        <!-- 轮播指示器 -->
+        <div class="banner-dots">
+            <div class="banner-dot active" onclick="changeSlide(0)"></div>
+            <div class="banner-dot" onclick="changeSlide(1)"></div>
+            <div class="banner-dot" onclick="changeSlide(2)"></div>
+        </div>
     </section>
 
-    <!-- 主要内容 -->
-    <div class="container">
-        <!-- 公司介绍 -->
-        <section class="about" id="about">
-            <h2>关于我们</h2>
-            <p>青岛容顺新材料有限公司（Qingdao rongshun new materials co.,Ltd）是一家专业从事PE保护膜研发、生产、销售的高新技术企业。</p>
-            <p>我们拥有先进的生产设备和专业的技术团队，可根据客户需求定制不同粘度、宽度、长度的PE保护膜，产品广泛应用于不锈钢板、UPVC型材、窗户玻璃、地毯等领域，具有防刮、防氧化、易撕不残胶等特点。</p>
-            <p>工厂直供，价格优势明显，支持外贸订单，为全球客户提供高品质的表面保护解决方案。</p>
-        </section>
-
-        <!-- 产品中心 -->
-        <section class="products" id="products">
-            <h2>产品中心</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <h3>不锈钢板保护膜</h3>
-                    <p>● 防刮、防氧化、耐温性好</p>
-                    <p>● 易撕不残胶，不影响板材表面</p>
-                    <p>● 支持定制宽度/厚度/粘度</p>
+    <!-- 关于我们 -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>
+                    <span class="cn-content">关于我们</span>
+                    <span class="en-content">About Us</span>
+                </h2>
+                <p>
+                    <span class="cn-content">专注PE保护膜研发生产，为客户提供高品质的表面保护解决方案</span>
+                    <span class="en-content">Focus on R&D and production of PE protective film, provide high-quality surface protection solutions for customers</span>
+                </p>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="https://picsum.photos/id/287/600/400" alt="公司介绍">
                 </div>
-                <div class="product-card">
-                    <h3>uPVC型材保护膜</h3>
-                    <p>● 耐候性强，适应户外环境</p>
-                    <p>● 保护门窗型材表面不被划伤</p>
-                    <p>● 可印刷LOGO，提升品牌形象</p>
-                </div>
-                <div class="product-card">
-                    <h3>窗户玻璃保护膜</h3>
-                    <p>● 施工过程防划伤、防污染</p>
-                    <p>● 高透性，不影响玻璃透光</p>
-                    <p>● 移除无残留，易操作</p>
-                </div>
-                <div class="product-card">
-                    <h3>地毯保护膜</h3>
-                    <p>● 装修临时保护，防滑易贴</p>
-                    <p>● 防水、防污，保护地毯清洁</p>
-                    <p>● 轻便易铺设，成本低</p>
-                </div>
-                <div class="product-card">
-                    <h3>定制化PE保护膜</h3>
-                    <p>● 可定制宽度、长度、颜色</p>
-                    <p>● 高粘/中粘/低粘可选</p>
-                    <p>● 支持印刷客户LOGO/文字</p>
+                <div class="about-text">
+                    <h3>
+                        <span class="cn-content">青岛容顺新材料有限公司</span>
+                        <span class="en-content">Qingdao Rongshun New Materials Co.,Ltd</span>
+                    </h3>
+                    <p class="cn-content">
+                        青岛容顺新材料有限公司是一家专业从事PE保护膜研发、生产、销售的高新技术企业，坐落于美丽的海滨城市青岛。公司拥有先进的生产设备和专业的技术团队，年产能达万吨级，产品广泛应用于不锈钢板、uPVC型材、窗户玻璃、地毯等多个领域。
+                    </p>
+                    <p class="en-content">
+                        Qingdao Rongshun New Materials Co.,Ltd is a high-tech enterprise specializing in the R&D, production and sales of PE protective film, located in the beautiful coastal city of Qingdao. The company has advanced production equipment and professional technical team, with an annual output of 10,000 tons, and its products are widely used in stainless steel plates, uPVC profiles, window glass, carpets and other fields.
+                    </p>
+                    <p class="cn-content">
+                        我们坚持"品质为先，客户至上"的经营理念，所有产品均通过严格的质量检测，确保为客户提供稳定、可靠的保护膜产品。支持定制化生产，可根据客户需求调整粘度、宽度、长度、颜色，并可印刷客户LOGO，满足不同场景的使用需求。
+                    </p>
+                    <p class="en-content">
+                        We adhere to the business philosophy of "quality first, customer foremost". All products pass strict quality inspection to ensure stable and reliable protective film products for customers. We support customized production, can adjust viscosity, width, length, color according to customer needs, and can print customer LOGO to meet the use needs of different scenarios.
+                    </p>
+                    <a href="#contact" class="btn">
+                        <span class="cn-content">了解更多</span>
+                        <span class="en-content">Learn More</span>
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 联系方式 -->
-        <section class="contact" id="contact">
-            <h2>联系我们</h2>
-            <p>联系人：Leo Lee</p>
-            <p>邮箱：<a href="mailto:LeoLeesales@hotmail.com">LeoLeesales@hotmail.com</a></p>
-            <p>公司名称：青岛容顺新材料有限公司 / Qingdao rongshun new materials co.,Ltd</p>
-            <p>业务范围：PE保护膜定制、批发、外贸出口</p>
-        </section>
-    </div>
+    <!-- 产品展示 -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>
+                    <span class="cn-content">产品中心</span>
+                    <span class="en-content">Product Center</span>
+                </h2>
+                <p>
+                    <span class="cn-content">全系列PE保护膜产品，满足不同场景的表面保护需求</span>
+                    <span class="en-content">Full range of PE protective film products to meet surface protection needs of different scenarios</span>
+                </p>
+            </div>
+            <div class="product-grid">
+                <!-- 不锈钢板保护膜 -->
+                <div class="product-card" id="stainless-steel">
+                    <div class="product-img">
+                        <img src="https://picsum.photos/id/177/500/300" alt="不锈钢板保护膜">
+                    </div>
+                    <div class="product-info">
+                        <h3>
+                            <span class="cn-content">不锈钢板保护膜</span>
+                            <span class="en-content">Stainless Steel Plate Film</span>
+                        </h3>
+                        <p class="cn-content">
+                            专为不锈钢板材设计，具有优异的防刮、防氧化性能，易撕不残胶，不影响板材表面光洁度。支持高/中/低粘度定制，适应不同厚度板材的保护需求。
+                        </p>
+                        <p class="en-content">
+                            Designed for stainless steel plates, with excellent scratch and oxidation resistance, easy to tear without residue, does not affect the surface finish of the plate. Support high/medium/low viscosity customization to meet the protection needs of different thickness plates.
+                        </p>
+                        <div class="product-tags">
+                            <span class="product-tag">
+                                <span class="cn-content">防刮伤</span>
+                                <span class="en-content">Scratch Resistant</span>
+                            </span>
+                            <span class="product-tag">
+                                <span class="cn-content">无残胶</span>
+                                <span class="en-content">No Residue</span>
+                            </span>
+                            <span class="product-tag">
+                                <span class="cn-content">定制粘度</span>
+                                <span class="en-content">Custom Viscosity</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- uPVC型材保护膜 -->
+                <div class="product-card" id="upvc-profile">
+                    <div class="product-img">
+                        <img src="https://picsum.photos/id/175/500/300" alt="uPVC型材保护膜">
+                    </div>
+                    <div class="product-info">
+                        <h3>
+                            <span class="cn-content">uPVC型材保护膜</span>
+                            <span class="en-content">uPVC Profile Film</span>
+                        </h3>
+                        <p class="cn-content">
+                            适用于门窗uPVC型材的表面保护，耐候性强，适应户外存储和运输环境，有效防止型材表面划伤、污染。可印刷客户LOGO，提升产品品牌形象。
+                        </p>
+                        <p class="en-content">
+                            Suitable for surface protection of door and window uPVC profiles, with strong weather resistance, adapt to outdoor storage and transportation environment, effectively prevent scratch and pollution on the surface of profiles. Can print customer LOGO to enhance product brand image.
+                        </p>
+                        <div class="product-tags">
+                            <span class="product-tag">
+                                <span class="cn-content">耐候性强</span>
+                                <span class="en-content">Weather Resistant</span>
+                            </span>
+                            <span class="product-tag">
+                                <span class="cn-content">防污染</span>
+                                <span class="en-content">Pollution Proof</span>
+                            </span>
+                            <span class="product-tag">
+                                <span class="cn-content">可印刷</span>
+                                <span class="en-content">Printable</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 窗户玻璃保护膜 -->
+                <div class="product-card" id="glass-film">
+                    <div class="product-img">
+                        <img src="https://picsum.photos/id/171/500/300" alt="窗户玻璃保护膜">
+                    </div>
+                    <div class="product-info">
+                        <h3>
+                            <span class="cn-content">窗户玻璃保护膜</span>
+                            <span class="en-content">Window Glass Film</span>
+                        </h3>
+                        <p class="cn-content">
+                            高透性玻璃保护膜，施工过程中有效保护玻璃表面不被划伤、污染，移除无残留，操作简单。适用于建筑玻璃、家居玻璃等多种玻璃制品的临时保护。
+                        </p>
+                        <p class="en-content">
+                            High transparency glass protective film, effectively protect the glass surface from scratch and pollution during construction, remove without residue, easy to operate. Suitable for temporary protection of various glass products such as architectural glass and household glass.
+                        </p>
+                        <div class="product-tags">
+                            <span class="product-tag">
+                                <span class="cn-content">高透光</span>
+                                <span class="en-content">High Transparency</span>
+                            </span>
+                            <span class="product-tag">
+                                <span class="cn-content">易移除</span>
+                                <span class="en-content">Easy Removal</span>
+                            </span>
+                            <span class="product-tag">
+                                <span class="cn-content">施工保护</span>
+                                <span class="en-content">Construction Protection</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 地毯保护膜 -->
+                <div class="product-card" id="carpet-film">
+                    <div class="product-img">
+                        <img src="https://picsum.photos/id/173/500/300" alt="地毯保护膜">
+                    </div>
+                    <div class="product-info">
+                        <h3>
+                            <span class="cn-content">地毯保护膜</span>
+                            <span class="en-content">Carpet Protection Film</span>
+                        </h3>
+                        <p class="cn-content">
+                            装修专用地毯保护膜，防滑易贴，防水防污，有效保护地毯在装修过程中不被损坏、污染。轻便易铺设，成本低，一次性使用更卫生。
+                        </p>
+                        <p class="en-content">
+                            Special carpet protective film for decoration, anti-slip and easy to stick, waterproof and stain proof, effectively protect the carpet from damage and pollution during decoration. Lightweight and easy to lay, low cost, more hygienic for one-time use.
+                        </p>
+                        <div class="product-tags">
+                            <span class="product-tag">
+                                <span class="cn-content">防滑</span>
+                                <span class="en-content">Anti-slip</span>
+                            </span>
+                            <span class="product-tag">
+                                <span class="cn-content">防水</span>
+                                <span class="en-content">Waterproof</span>
+                            </span>
+                            <span class="product-tag">
+                                <span class="cn-content">装修专用</span>
+                                <span class="en-content">Decoration Special</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 定制保护膜 -->
+                <div class="product-card" id="custom-film">
+                    <div class="product-img">
+                        <img src="https://picsum.photos/id/183/500/300" alt="定制保护膜">
+                    </div>
+                    <div class="product-info">
+                        <h3>
+                            <span class="cn-content">定制化PE保护膜</span>
+                            <span class="en-content">Custom PE Protective Film</span>
+                        </h3>
+                        <p class="cn-content">
+                            根据客户需求定制专属PE保护膜，可调整宽度（10mm-2000mm）、长度、厚度，颜色可选透明、蓝色、黑色等，支持印刷LOGO、文字、二维码等。
+                        </p>
+                        <p class="en-content">
+                            Customize exclusive PE protective film according to customer needs, can adjust width (10mm-2000mm), length, thickness, color options include transparent, blue, black, etc., support printing LOGO, text, QR code, etc.
+                        </p>
+                        <div class="product-tags">
+                            <span class="product-tag">
+                                <span class="cn-content">尺寸定制</span>
+                                <span class="en-content">Size Custom</span>
+                            </span>
+                            <span class="product-tag">
+                                <span class="cn-content">颜色定制</span>
+                                <span class="en-content">Color Custom</span>
+                            </span>
+                            <span class="product-tag">
+                                <span class="cn-content">LOGO印刷</span>
+                                <span class="en-content">LOGO Printing</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工厂展示 -->
+    <section class="factory" id="factory">
+        <div class="container">
+            <div class="section-title">
+                <h2>
+                    <span class="cn-content">工厂展示</span>
+                    <span class="en-content">Factory Display</span>
+                </h2>
+                <p>
+                    <span class="cn-content">先进的生产设备，标准化的生产流程，确保产品品质稳定</span>
+                    <span class="en-content">Advanced production equipment and standardized production process ensure stable product quality</span>
+                </p>
+            </div>
+            <div class="factory-grid">
+                <div class="factory-item">
+                    <img src="https://picsum.photos/id/28/500/300" alt="生产车间">
+                </div>
+                <div class="factory-item">
+                    <img src="https://picsum.photos/id/29/500/300" alt="生产设备">
+                </div>
+                <div class="factory-item">
+                    <img src="https://picsum.photos/id/30/500/300" alt="质检环节">
+                </div>
+                <div class="factory-item">
+                    <img src="https://picsum.photos/id/31/500/300" alt="成品仓库">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>
+                    <span class="cn-content">联系我们</span>
+                    <span class="en-content">Contact Us</span>
+                </h2>
+                <p>
+                    <span class="cn-content">欢迎咨询PE保护膜相关业务，我们将竭诚为您服务</span>
+                    <span class="en-content">Welcome to consult PE protective film related business, we will serve you wholeheartedly</span>
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>
+                        <span class="cn-content">联系方式</span>
+                        <span class="en-content">Contact Information</span>
+                    </h3>
+                    <div class="contact-item">
+                        <i class="fas fa-user"></i>
+                        <p>
+                            <span class="cn-content">联系人：Leo Lee</span>
+                            <span class="en-content">Contact Person: Leo Lee</span>
+                        </p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>
+                            <span class="cn-content">邮箱：</span>
+                            <span class="en-content">Email：</span>
+                            <a href="mailto:LeoLeesales@hotmail.com">LeoLeesales@hotmail.com</a>
+                        </p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-building"></i>
+                        <p>
+                            <span class="cn-content">公司名称：青岛容顺新材料有限公司</span>
+                            <span class="en-content">Company Name: Qingdao Rongshun New Materials Co.,Ltd</span>
+                        </p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <p>
+                            <span class="cn-content">业务范围：PE保护膜定制、批发、外贸出口</span>
+                            <span class="en-content">Business Scope: PE film customization, wholesale, export</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>
+                        <span class="cn-content">在线留言</span>
+                        <span class="en-content">Leave a Message</span>
+                    </h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">
+                                <span class="cn-content">您的姓名</span>
+                                <span class="en-content">Your Name</span>
+                            </label>
+                            <input type="text" id="name" placeholder="请输入姓名 / Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                <span class="cn-content">您的邮箱</span>
+                                <span class="en-content">Your Email</span>
+                            </label>
+                            <input type="email" id="email" placeholder="请输入邮箱 / Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">
+                                <span class="cn-content">留言主题</span>
+                                <span class="en-content">Subject</span>
+                            </label>
+                            <input type="text" id="subject" placeholder="请输入主题 / Enter subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">
+                                <span class="cn-content">留言内容</span>
+                                <span class="en-content">Message</span>
+                            </label>
+                            <textarea id="message" placeholder="请输入您的需求 / Enter your requirements"></textarea>
+                        </div>
+                        <button type="submit" class="btn">
+                            <span class="cn-content">提交留言</span>
+                            <span class="en-content">Submit Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- 页脚 -->
     <footer>
-        <p>© 2026 青岛容顺新材料有限公司 版权所有</p>
-        <p>专业PE保护膜生产厂家 | 全球客户合作</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>
+                        <span class="cn-content">关于容顺</span>
+                        <span class="en-content">About Rongshun</span>
+                    </h3>
+                    <p class="cn-content">
+                        青岛容顺新材料有限公司是专业的PE保护膜生产厂家，专注于为客户提供高品质的表面保护解决方案，产品广泛应用于多个行业领域。
+                    </p>
+                    <p class="en-content">
+                        Qingdao Rongshun New Materials Co.,Ltd is a professional manufacturer of PE protective film, focusing on providing high-quality surface protection solutions for customers, and its products are widely used in many industries.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h3>
+                        <span class="cn-content">产品中心</span>
+                        <span class="en-content">Products</span>
+                    </h3>
+                    <ul>
+                        <li><a href="#stainless-steel">
+                            <span class="cn-content">不锈钢板保护膜</span>
+                            <span class="en-content">Stainless Steel Film</span>
+                        </a></li>
+                        <li><a href="#upvc-profile">
+                            <span class="cn-content">uPVC型材保护膜</span>
+                            <span class="en-content">uPVC Profile Film</span>
+                        </a></li>
+                        <li><a href="#glass-film">
+                            <span class="cn-content">窗户玻璃保护膜</span>
+                            <span class="en-content">Window Glass Film</span>
+                        </a></li>
+                        <li><a href="#carpet-film">
+                            <span class="cn-content">地毯保护膜</span>
+                            <span class="en-content">Carpet Film</span>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>
+                        <span class="cn-content">快速链接</span>
+                        <span class="en-content">Quick Links</span>
+                    </h3>
+                    <ul>
+                        <li><a href="#home">
+                            <span class="cn-content">首页</span>
+                            <span class="en-content">Home</span>
+                        </a></li>
+                        <li><a href="#about">
+                            <span class="cn-content">关于我们</span>
+                            <span class="en-content">About Us</span>
+                        </a></li>
+                        <li><a href="#factory">
+                            <span class="cn-content">工厂展示</span>
+                            <span class="en-content">Factory</span>
+                        </a></li>
+                        <li><a href="#contact">
+                            <span class="cn-content">联系我们</span>
+                            <span class="en-content">Contact</span>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>
+                        <span class="cn-content">联系我们</span>
+                        <span class="en-content">Contact Us</span>
+                    </h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:LeoLeesales@hotmail.com">LeoLeesales@hotmail.com</a>
+                        </li>
+                        <li>
+                            <span class="cn-content">地址：山东省青岛市城阳区</span>
+                            <span class="en-content">Address: Chengyang District, Qingdao, Shandong</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 青岛容顺新材料有限公司 All Rights Reserved.</p>
+                <p class="cn-content">专业PE保护膜生产厂家 | 外贸出口专供</p>
+                <p class="en-content">Professional PE Protective Film Manufacturer | Export Special Supply</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- JS脚本：轮播+语言切换+移动端菜单 -->
+    <script>
+        // 语言切换功能
+        function switchLang(lang) {
+            document.body.className = lang;
+            document.querySelectorAll('.lang-switch button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`.${lang}-btn`).classList.add('active');
+        }
+
+        // 轮播图功能
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.banner-slide');
+        const dots = document.querySelectorAll('.banner-dot');
+
+        function changeSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        // 自动轮播
+        setInterval(() => {
+            let nextSlide = (currentSlide + 1) % slides.length;
+            changeSlide(nextSlide);
+        }, 5000);
+
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menuToggle');
+        const mainMenu = document.getElementById('mainMenu');
+
+        menuToggle.addEventListener('click', () => {
+            mainMenu.classList.toggle('active');
+            // 切换菜单图标
+            const icon = menuToggle.querySelector('i');
+            if (mainMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    // 关闭移动端菜单
+                    mainMenu.classList.remove('active');
+                    menuToggle.querySelector('i').classList.remove('fa-times');
+                    menuToggle.querySelector('i').classList.add('fa-bars');
+                }
+            });
+        });
+
+        // 表单提交（前端模拟）
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert(
+                document.body.classList.contains('cn') 
+                    ? '留言提交成功！我们将尽快与您联系。' 
+                    : 'Message submitted successfully! We will contact you as soon as possible.'
+            );
+            this.reset();
+        });
+    </script>
 </body>
 </html>
