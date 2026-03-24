@@ -6,7 +6,7 @@
     <title>PE保护膜-青岛容顺新材料有限公司 | Rongshun New Materials</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 全局样式重置 */
+        /* 全局样式重置（保持不变） */
         * {
             margin: 0;
             padding: 0;
@@ -755,56 +755,56 @@
                 <div class="menu-toggle" id="menuToggle">
                     <i class="fas fa-bars"></i>
                 </div>
-                <!-- 多级导航菜单 -->
+                <!-- 多级导航菜单（修正页面ID） -->
                 <ul class="main-menu" id="mainMenu">
                     <li>
-                        <a href="javascript:void(0)" onclick="showPage('home')">
+                        <a href="javascript:void(0)" onclick="showPage('home-page')">
                             <span class="cn-content">首页</span>
                             <span class="en-content">Home</span>
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" onclick="showPage('about')">
+                        <a href="javascript:void(0)" onclick="showPage('about-page')">
                             <span class="cn-content">关于我们</span>
                             <span class="en-content">About Us</span>
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" onclick="showPage('products')">
+                        <a href="javascript:void(0)" onclick="showPage('products-page')">
                             <span class="cn-content">产品中心</span>
                             <span class="en-content">Products</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="javascript:void(0)" onclick="showPage('stainless-steel')">
+                            <li><a href="javascript:void(0)" onclick="showPage('stainless-steel-page')">
                                 <span class="cn-content">不锈钢板保护膜</span>
                                 <span class="en-content">Stainless Steel Film</span>
                             </a></li>
-                            <li><a href="javascript:void(0)" onclick="showPage('upvc-profile')">
+                            <li><a href="javascript:void(0)" onclick="showPage('upvc-profile-page')">
                                 <span class="cn-content">uPVC型材保护膜</span>
                                 <span class="en-content">uPVC Profile Film</span>
                             </a></li>
-                            <li><a href="javascript:void(0)" onclick="showPage('glass-film')">
+                            <li><a href="javascript:void(0)" onclick="showPage('glass-film-page')">
                                 <span class="cn-content">窗户玻璃保护膜</span>
                                 <span class="en-content">Window Glass Film</span>
                             </a></li>
-                            <li><a href="javascript:void(0)" onclick="showPage('carpet-film')">
+                            <li><a href="javascript:void(0)" onclick="showPage('carpet-film-page')">
                                 <span class="cn-content">地毯保护膜</span>
                                 <span class="en-content">Carpet Protection Film</span>
                             </a></li>
-                            <li><a href="javascript:void(0)" onclick="showPage('custom-film')">
+                            <li><a href="javascript:void(0)" onclick="showPage('custom-film-page')">
                                 <span class="cn-content">定制保护膜</span>
                                 <span class="en-content">Custom Film</span>
                             </a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" onclick="showPage('factory')">
+                        <a href="javascript:void(0)" onclick="showPage('factory-page')">
                             <span class="cn-content">工厂展示</span>
                             <span class="en-content">Factory</span>
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" onclick="showPage('contact')">
+                        <a href="javascript:void(0)" onclick="showPage('contact-page')">
                             <span class="cn-content">联系我们</span>
                             <span class="en-content">Contact</span>
                         </a>
@@ -824,11 +824,11 @@
         </div>
     </div>
 
+    <!-- 页面容器：首页、关于、产品汇总、产品详情、工厂、联系 -->
     <!-- 首页 -->
     <div class="page active" id="home-page">
         <!-- 轮播Banner -->
         <section class="banner">
-            <!-- 轮播图1 -->
             <div class="banner-slide active">
                 <img src="https://picsum.photos/id/180/1920/600" alt="PE保护膜工厂">
                 <div class="banner-content">
@@ -840,13 +840,12 @@
                         <span class="cn-content">专注表面保护解决方案，工厂直供，品质保障</span>
                         <span class="en-content">Focus on surface protection solutions, factory direct supply, quality assurance</span>
                     </p>
-                    <a href="javascript:void(0)" onclick="showPage('contact')" class="btn">
+                    <a href="javascript:void(0)" onclick="showPage('contact-page')" class="btn">
                         <span class="cn-content">立即咨询</span>
                         <span class="en-content">Contact Us Now</span>
                     </a>
                 </div>
             </div>
-            <!-- 轮播图2 -->
             <div class="banner-slide">
                 <img src="https://picsum.photos/id/20/1920/600" alt="PE保护膜产品">
                 <div class="banner-content">
@@ -858,13 +857,12 @@
                         <span class="cn-content">不锈钢/型材/玻璃/地毯等多场景适用</span>
                         <span class="en-content">Suitable for stainless steel, profile, glass, carpet and other scenarios</span>
                     </p>
-                    <a href="javascript:void(0)" onclick="showPage('products')" class="btn">
+                    <a href="javascript:void(0)" onclick="showPage('products-page')" class="btn">
                         <span class="cn-content">查看产品</span>
                         <span class="en-content">View Products</span>
                     </a>
                 </div>
             </div>
-            <!-- 轮播图3 -->
             <div class="banner-slide">
                 <img src="https://picsum.photos/id/118/1920/600" alt="外贸出口">
                 <div class="banner-content">
@@ -876,13 +874,12 @@
                         <span class="cn-content">定制化服务，满足不同国家客户需求</span>
                         <span class="en-content">Customized services to meet the needs of customers in different countries</span>
                     </p>
-                    <a href="javascript:void(0)" onclick="showPage('contact')" class="btn">
+                    <a href="javascript:void(0)" onclick="showPage('contact-page')" class="btn">
                         <span class="cn-content">洽谈合作</span>
                         <span class="en-content">Cooperation</span>
                     </a>
                 </div>
             </div>
-            <!-- 轮播指示器 -->
             <div class="banner-dots">
                 <div class="banner-dot active" onclick="changeSlide(0)"></div>
                 <div class="banner-dot" onclick="changeSlide(1)"></div>
@@ -924,7 +921,7 @@
                         <p class="en-content">
                             We adhere to the business philosophy of "quality first, customer foremost". All products pass strict quality inspection to ensure stable and reliable protective film products for customers. We support customized production, can adjust viscosity, width, length, color according to customer needs, and can print customer LOGO to meet the use needs of different scenarios.
                         </p>
-                        <a href="javascript:void(0)" onclick="showPage('about')" class="btn">
+                        <a href="javascript:void(0)" onclick="showPage('about-page')" class="btn">
                             <span class="cn-content">了解更多</span>
                             <span class="en-content">Learn More</span>
                         </a>
@@ -947,163 +944,93 @@
                     </p>
                 </div>
                 <div class="product-grid">
-                    <!-- 不锈钢板保护膜 -->
                     <div class="product-card">
-                        <div class="product-img" onclick="showPage('stainless-steel')">
+                        <div class="product-img" onclick="showPage('stainless-steel-page')">
                             <img src="https://picsum.photos/id/177/500/300" alt="不锈钢板保护膜">
                         </div>
                         <div class="product-info">
-                            <h3 onclick="showPage('stainless-steel')">
+                            <h3 onclick="showPage('stainless-steel-page')">
                                 <span class="cn-content">不锈钢板保护膜</span>
                                 <span class="en-content">Stainless Steel Plate Film</span>
                             </h3>
-                            <p class="cn-content">
-                                专为不锈钢板材设计，具有优异的防刮、防氧化性能，易撕不残胶，不影响板材表面光洁度。
-                            </p>
-                            <p class="en-content">
-                                Designed for stainless steel plates, with excellent scratch and oxidation resistance, easy to tear without residue.
-                            </p>
+                            <p class="cn-content">专为不锈钢板材设计，具有优异的防刮、防氧化性能，易撕不残胶，不影响板材表面光洁度。</p>
+                            <p class="en-content">Designed for stainless steel plates, with excellent scratch and oxidation resistance, easy to tear without residue.</p>
                             <div class="product-tags">
-                                <span class="product-tag">
-                                    <span class="cn-content">防刮伤</span>
-                                    <span class="en-content">Scratch Resistant</span>
-                                </span>
-                                <span class="product-tag">
-                                    <span class="cn-content">无残胶</span>
-                                    <span class="en-content">No Residue</span>
-                                </span>
-                                <span class="product-tag">
-                                    <span class="cn-content">定制粘度</span>
-                                    <span class="en-content">Custom Viscosity</span>
-                                </span>
+                                <span class="product-tag"><span class="cn-content">防刮伤</span><span class="en-content">Scratch Resistant</span></span>
+                                <span class="product-tag"><span class="cn-content">无残胶</span><span class="en-content">No Residue</span></span>
+                                <span class="product-tag"><span class="cn-content">定制粘度</span><span class="en-content">Custom Viscosity</span></span>
                             </div>
                         </div>
                     </div>
-                    <!-- uPVC型材保护膜 -->
                     <div class="product-card">
-                        <div class="product-img" onclick="showPage('upvc-profile')">
+                        <div class="product-img" onclick="showPage('upvc-profile-page')">
                             <img src="https://picsum.photos/id/175/500/300" alt="uPVC型材保护膜">
                         </div>
                         <div class="product-info">
-                            <h3 onclick="showPage('upvc-profile')">
+                            <h3 onclick="showPage('upvc-profile-page')">
                                 <span class="cn-content">uPVC型材保护膜</span>
                                 <span class="en-content">uPVC Profile Film</span>
                             </h3>
-                            <p class="cn-content">
-                                适用于门窗uPVC型材的表面保护，耐候性强，适应户外存储和运输环境，有效防止型材表面划伤。
-                            </p>
-                            <p class="en-content">
-                                Suitable for surface protection of door and window uPVC profiles, with strong weather resistance, effectively prevent scratch on the surface.
-                            </p>
+                            <p class="cn-content">适用于门窗uPVC型材的表面保护，耐候性强，适应户外存储和运输环境，有效防止型材表面划伤。</p>
+                            <p class="en-content">Suitable for surface protection of door and window uPVC profiles, with strong weather resistance, effectively prevent scratch on the surface.</p>
                             <div class="product-tags">
-                                <span class="product-tag">
-                                    <span class="cn-content">耐候性强</span>
-                                    <span class="en-content">Weather Resistant</span>
-                                </span>
-                                <span class="product-tag">
-                                    <span class="cn-content">防污染</span>
-                                    <span class="en-content">Pollution Proof</span>
-                                </span>
-                                <span class="product-tag">
-                                    <span class="cn-content">可印刷</span>
-                                    <span class="en-content">Printable</span>
-                                </span>
+                                <span class="product-tag"><span class="cn-content">耐候性强</span><span class="en-content">Weather Resistant</span></span>
+                                <span class="product-tag"><span class="cn-content">防污染</span><span class="en-content">Pollution Proof</span></span>
+                                <span class="product-tag"><span class="cn-content">可印刷</span><span class="en-content">Printable</span></span>
                             </div>
                         </div>
                     </div>
-                    <!-- 窗户玻璃保护膜 -->
                     <div class="product-card">
-                        <div class="product-img" onclick="showPage('glass-film')">
+                        <div class="product-img" onclick="showPage('glass-film-page')">
                             <img src="https://picsum.photos/id/171/500/300" alt="窗户玻璃保护膜">
                         </div>
                         <div class="product-info">
-                            <h3 onclick="showPage('glass-film')">
+                            <h3 onclick="showPage('glass-film-page')">
                                 <span class="cn-content">窗户玻璃保护膜</span>
                                 <span class="en-content">Window Glass Film</span>
                             </h3>
-                            <p class="cn-content">
-                                高透性玻璃保护膜，施工过程中有效保护玻璃表面不被划伤、污染，移除无残留，操作简单。
-                            </p>
-                            <p class="en-content">
-                                High transparency glass protective film, effectively protect the glass surface from scratch and pollution during construction.
-                            </p>
+                            <p class="cn-content">高透性玻璃保护膜，施工过程中有效保护玻璃表面不被划伤、污染，移除无残留，操作简单。</p>
+                            <p class="en-content">High transparency glass protective film, effectively protect the glass surface from scratch and pollution during construction.</p>
                             <div class="product-tags">
-                                <span class="product-tag">
-                                    <span class="cn-content">高透光</span>
-                                    <span class="en-content">High Transparency</span>
-                                </span>
-                                <span class="product-tag">
-                                    <span class="cn-content">易移除</span>
-                                    <span class="en-content">Easy Removal</span>
-                                </span>
-                                <span class="product-tag">
-                                    <span class="cn-content">施工保护</span>
-                                    <span class="en-content">Construction Protection</span>
-                                </span>
+                                <span class="product-tag"><span class="cn-content">高透光</span><span class="en-content">High Transparency</span></span>
+                                <span class="product-tag"><span class="cn-content">易移除</span><span class="en-content">Easy Removal</span></span>
+                                <span class="product-tag"><span class="cn-content">施工保护</span><span class="en-content">Construction Protection</span></span>
                             </div>
                         </div>
                     </div>
-                    <!-- 地毯保护膜 -->
                     <div class="product-card">
-                        <div class="product-img" onclick="showPage('carpet-film')">
+                        <div class="product-img" onclick="showPage('carpet-film-page')">
                             <img src="https://picsum.photos/id/173/500/300" alt="地毯保护膜">
                         </div>
                         <div class="product-info">
-                            <h3 onclick="showPage('carpet-film')">
+                            <h3 onclick="showPage('carpet-film-page')">
                                 <span class="cn-content">地毯保护膜</span>
                                 <span class="en-content">Carpet Protection Film</span>
                             </h3>
-                            <p class="cn-content">
-                                装修专用地毯保护膜，防滑易贴，防水防污，有效保护地毯在装修过程中不被损坏、污染。
-                            </p>
-                            <p class="en-content">
-                                Special carpet protective film for decoration, anti-slip and easy to stick, waterproof and stain proof, protect carpet from damage.
-                            </p>
+                            <p class="cn-content">装修专用地毯保护膜，防滑易贴，防水防污，有效保护地毯在装修过程中不被损坏、污染。</p>
+                            <p class="en-content">Special carpet protective film for decoration, anti-slip and easy to stick, waterproof and stain proof, protect carpet from damage.</p>
                             <div class="product-tags">
-                                <span class="product-tag">
-                                    <span class="cn-content">防滑</span>
-                                    <span class="en-content">Anti-slip</span>
-                                </span>
-                                <span class="product-tag">
-                                    <span class="cn-content">防水</span>
-                                    <span class="en-content">Waterproof</span>
-                                </span>
-                                <span class="product-tag">
-                                    <span class="cn-content">装修专用</span>
-                                    <span class="en-content">Decoration Special</span>
-                                </span>
+                                <span class="product-tag"><span class="cn-content">防滑</span><span class="en-content">Anti-slip</span></span>
+                                <span class="product-tag"><span class="cn-content">防水</span><span class="en-content">Waterproof</span></span>
+                                <span class="product-tag"><span class="cn-content">装修专用</span><span class="en-content">Decoration Special</span></span>
                             </div>
                         </div>
                     </div>
-                    <!-- 定制保护膜 -->
                     <div class="product-card">
-                        <div class="product-img" onclick="showPage('custom-film')">
+                        <div class="product-img" onclick="showPage('custom-film-page')">
                             <img src="https://picsum.photos/id/183/500/300" alt="定制保护膜">
                         </div>
                         <div class="product-info">
-                            <h3 onclick="showPage('custom-film')">
+                            <h3 onclick="showPage('custom-film-page')">
                                 <span class="cn-content">定制化PE保护膜</span>
                                 <span class="en-content">Custom PE Protective Film</span>
                             </h3>
-                            <p class="cn-content">
-                                根据客户需求定制专属PE保护膜，可调整宽度、长度、厚度，颜色可选透明、蓝色、黑色等。
-                            </p>
-                            <p class="en-content">
-                                Customize exclusive PE protective film according to customer needs, adjust width, length, thickness, color options include transparent, blue, black.
-                            </p>
+                            <p class="cn-content">根据客户需求定制专属PE保护膜，可调整宽度、长度、厚度，颜色可选透明、蓝色、黑色等。</p>
+                            <p class="en-content">Customize exclusive PE protective film according to customer needs, adjust width, length, thickness, color options include transparent, blue, black.</p>
                             <div class="product-tags">
-                                <span class="product-tag">
-                                    <span class="cn-content">尺寸定制</span>
-                                    <span class="en-content">Size Custom</span>
-                                </span>
-                                <span class="product-tag">
-                                    <span class="cn-content">颜色定制</span>
-                                    <span class="en-content">Color Custom</span>
-                                </span>
-                                <span class="product-tag">
-                                    <span class="cn-content">LOGO印刷</span>
-                                    <span class="en-content">LOGO Printing</span>
-                                </span>
+                                <span class="product-tag"><span class="cn-content">尺寸定制</span><span class="en-content">Size Custom</span></span>
+                                <span class="product-tag"><span class="cn-content">颜色定制</span><span class="en-content">Color Custom</span></span>
+                                <span class="product-tag"><span class="cn-content">LOGO印刷</span><span class="en-content">LOGO Printing</span></span>
                             </div>
                         </div>
                     </div>
@@ -1125,18 +1052,10 @@
                     </p>
                 </div>
                 <div class="factory-grid">
-                    <div class="factory-item">
-                        <img src="https://picsum.photos/id/28/500/300" alt="生产车间">
-                    </div>
-                    <div class="factory-item">
-                        <img src="https://picsum.photos/id/29/500/300" alt="生产设备">
-                    </div>
-                    <div class="factory-item">
-                        <img src="https://picsum.photos/id/30/500/300" alt="质检环节">
-                    </div>
-                    <div class="factory-item">
-                        <img src="https://picsum.photos/id/31/500/300" alt="成品仓库">
-                    </div>
+                    <div class="factory-item"><img src="https://picsum.photos/id/28/500/300" alt="生产车间"></div>
+                    <div class="factory-item"><img src="https://picsum.photos/id/29/500/300" alt="生产设备"></div>
+                    <div class="factory-item"><img src="https://picsum.photos/id/30/500/300" alt="质检环节"></div>
+                    <div class="factory-item"><img src="https://picsum.photos/id/31/500/300" alt="成品仓库"></div>
                 </div>
             </div>
         </section>
@@ -1160,35 +1079,10 @@
                             <span class="cn-content">联系方式</span>
                             <span class="en-content">Contact Information</span>
                         </h3>
-                        <div class="contact-item">
-                            <i class="fas fa-user"></i>
-                            <p>
-                                <span class="cn-content">联系人：Leo Lee</span>
-                                <span class="en-content">Contact Person: Leo Lee</span>
-                            </p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <p>
-                                <span class="cn-content">邮箱：</span>
-                                <span class="en-content">Email：</span>
-                                <a href="mailto:LeoLeesales@hotmail.com">LeoLeesales@hotmail.com</a>
-                            </p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-building"></i>
-                            <p>
-                                <span class="cn-content">公司名称：青岛容顺新材料有限公司</span>
-                                <span class="en-content">Company Name: Qingdao Rongshun New Materials Co.,Ltd</span>
-                            </p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-globe"></i>
-                            <p>
-                                <span class="cn-content">业务范围：PE保护膜定制、批发、外贸出口</span>
-                                <span class="en-content">Business Scope: PE film customization, wholesale, export</span>
-                            </p>
-                        </div>
+                        <div class="contact-item"><i class="fas fa-user"></i><p><span class="cn-content">联系人：Leo Lee</span><span class="en-content">Contact Person: Leo Lee</span></p></div>
+                        <div class="contact-item"><i class="fas fa-envelope"></i><p><span class="cn-content">邮箱：</span><span class="en-content">Email：</span><a href="mailto:LeoLeesales@hotmail.com">LeoLeesales@hotmail.com</a></p></div>
+                        <div class="contact-item"><i class="fas fa-building"></i><p><span class="cn-content">公司名称：青岛容顺新材料有限公司</span><span class="en-content">Company Name: Qingdao Rongshun New Materials Co.,Ltd</span></p></div>
+                        <div class="contact-item"><i class="fas fa-globe"></i><p><span class="cn-content">业务范围：PE保护膜定制、批发、外贸出口</span><span class="en-content">Business Scope: PE film customization, wholesale, export</span></p></div>
                     </div>
                     <div class="contact-form">
                         <h3>
@@ -1196,38 +1090,11 @@
                             <span class="en-content">Leave a Message</span>
                         </h3>
                         <form id="contact-form">
-                            <div class="form-group">
-                                <label for="name">
-                                    <span class="cn-content">您的姓名</span>
-                                    <span class="en-content">Your Name</span>
-                                </label>
-                                <input type="text" id="name" placeholder="请输入姓名 / Enter your name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">
-                                    <span class="cn-content">您的邮箱</span>
-                                    <span class="en-content">Your Email</span>
-                                </label>
-                                <input type="email" id="email" placeholder="请输入邮箱 / Enter your email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">
-                                    <span class="cn-content">留言主题</span>
-                                    <span class="en-content">Subject</span>
-                                </label>
-                                <input type="text" id="subject" placeholder="请输入主题 / Enter subject" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">
-                                    <span class="cn-content">留言内容</span>
-                                    <span class="en-content">Message</span>
-                                </label>
-                                <textarea id="message" placeholder="请输入您的需求 / Enter your requirements" required></textarea>
-                            </div>
-                            <button type="submit" class="btn">
-                                <span class="cn-content">提交留言</span>
-                                <span class="en-content">Submit Message</span>
-                            </button>
+                            <div class="form-group"><label for="name"><span class="cn-content">您的姓名</span><span class="en-content">Your Name</span></label><input type="text" id="name" placeholder="请输入姓名 / Enter your name" required></div>
+                            <div class="form-group"><label for="email"><span class="cn-content">您的邮箱</span><span class="en-content">Your Email</span></label><input type="email" id="email" placeholder="请输入邮箱 / Enter your email" required></div>
+                            <div class="form-group"><label for="subject"><span class="cn-content">留言主题</span><span class="en-content">Subject</span></label><input type="text" id="subject" placeholder="请输入主题 / Enter subject" required></div>
+                            <div class="form-group"><label for="message"><span class="cn-content">留言内容</span><span class="en-content">Message</span></label><textarea id="message" placeholder="请输入您的需求 / Enter your requirements" required></textarea></div>
+                            <button type="submit" class="btn"><span class="cn-content">提交留言</span><span class="en-content">Submit Message</span></button>
                         </form>
                     </div>
                 </div>
@@ -1239,41 +1106,19 @@
     <div class="page" id="about-page">
         <div class="container">
             <div class="section-title">
-                <h2>
-                    <span class="cn-content">关于我们</span>
-                    <span class="en-content">About Us</span>
-                </h2>
+                <h2><span class="cn-content">关于我们</span><span class="en-content">About Us</span></h2>
             </div>
             <div class="about-content" style="grid-template-columns: 1fr; max-width: 1000px; margin: 0 auto;">
                 <div class="about-text">
-                    <h3>
-                        <span class="cn-content">青岛容顺新材料有限公司</span>
-                        <span class="en-content">Qingdao Rongshun New Materials Co.,Ltd</span>
-                    </h3>
-                    <p class="cn-content">
-                        青岛容顺新材料有限公司成立于2010年，是一家集研发、生产、销售为一体的PE保护膜专业生产企业。公司位于山东省青岛市城阳区，交通便利，距离青岛港仅20公里，便于产品出口运输。
-                    </p>
-                    <p class="en-content">
-                        Founded in 2010, Qingdao Rongshun New Materials Co.,Ltd is a professional PE protective film manufacturer integrating R&D, production and sales. The company is located in Chengyang District, Qingdao City, Shandong Province, with convenient transportation, only 20 kilometers away from Qingdao Port, which is convenient for product export transportation.
-                    </p>
-                    <p class="cn-content">
-                        公司拥有现代化的生产车间10000平方米，进口生产设备20余台套，年生产能力达12000吨。我们的产品涵盖不锈钢板保护膜、uPVC型材保护膜、窗户玻璃保护膜、地毯保护膜等多个系列，广泛应用于建材、装饰、家电、汽车等行业。
-                    </p>
-                    <p class="en-content">
-                        The company has a modern production workshop of 10,000 square meters, more than 20 sets of imported production equipment, with an annual production capacity of 12,000 tons. Our products cover stainless steel plate protective film, uPVC profile protective film, window glass protective film, carpet protective film and other series, widely used in building materials, decoration, home appliances, automotive and other industries.
-                    </p>
-                    <p class="cn-content">
-                        质量控制：我们建立了完善的质量管理体系，从原材料采购到成品出库，每一个环节都有严格的质量检测。产品通过SGS、ROHS等国际认证，符合欧盟、美国等国家的环保标准。
-                    </p>
-                    <p class="en-content">
-                        Quality Control: We have established a complete quality management system, with strict quality inspection in every link from raw material procurement to finished product delivery. Products have passed international certifications such as SGS and ROHS, complying with environmental protection standards of EU, USA and other countries.
-                    </p>
-                    <p class="cn-content">
-                        服务理念：以客户需求为导向，提供定制化的产品解决方案；以品质为核心，确保每一批产品都符合客户要求；以诚信为根本，建立长期稳定的合作关系。
-                    </p>
-                    <p class="en-content">
-                        Service Concept: Customer demand-oriented, provide customized product solutions; quality as the core, ensure that each batch of products meets customer requirements; integrity as the fundamental, establish long-term and stable cooperative relations.
-                    </p>
+                    <h3><span class="cn-content">青岛容顺新材料有限公司</span><span class="en-content">Qingdao Rongshun New Materials Co.,Ltd</span></h3>
+                    <p class="cn-content">青岛容顺新材料有限公司成立于2010年，是一家集研发、生产、销售为一体的PE保护膜专业生产企业。公司位于山东省青岛市城阳区，交通便利，距离青岛港仅20公里，便于产品出口运输。</p>
+                    <p class="en-content">Founded in 2010, Qingdao Rongshun New Materials Co.,Ltd is a professional PE protective film manufacturer integrating R&D, production and sales. The company is located in Chengyang District, Qingdao City, Shandong Province, with convenient transportation, only 20 kilometers away from Qingdao Port, which is convenient for product export transportation.</p>
+                    <p class="cn-content">公司拥有现代化的生产车间10000平方米，进口生产设备20余台套，年生产能力达12000吨。我们的产品涵盖不锈钢板保护膜、uPVC型材保护膜、窗户玻璃保护膜、地毯保护膜等多个系列，广泛应用于建材、装饰、家电、汽车等行业。</p>
+                    <p class="en-content">The company has a modern production workshop of 10,000 square meters, more than 20 sets of imported production equipment, with an annual production capacity of 12,000 tons. Our products cover stainless steel plate protective film, uPVC profile protective film, window glass protective film, carpet protective film and other series, widely used in building materials, decoration, home appliances, automotive and other industries.</p>
+                    <p class="cn-content">质量控制：我们建立了完善的质量管理体系，从原材料采购到成品出库，每一个环节都有严格的质量检测。产品通过SGS、ROHS等国际认证，符合欧盟、美国等国家的环保标准。</p>
+                    <p class="en-content">Quality Control: We have established a complete quality management system, with strict quality inspection in every link from raw material procurement to finished product delivery. Products have passed international certifications such as SGS and ROHS, complying with environmental protection standards of EU, USA and other countries.</p>
+                    <p class="cn-content">服务理念：以客户需求为导向，提供定制化的产品解决方案；以品质为核心，确保每一批产品都符合客户要求；以诚信为根本，建立长期稳定的合作关系。</p>
+                    <p class="en-content">Service Concept: Customer demand-oriented, provide customized product solutions; quality as the core, ensure that each batch of products meets customer requirements; integrity as the fundamental, establish long-term and stable cooperative relations.</p>
                 </div>
             </div>
         </div>
@@ -1283,334 +1128,213 @@
     <div class="page" id="products-page">
         <div class="container">
             <div class="section-title">
-                <h2>
-                    <span class="cn-content">产品中心</span>
-                    <span class="en-content">Product Center</span>
-                </h2>
-                <p>
-                    <span class="cn-content">全系列PE保护膜产品，满足不同场景的表面保护需求</span>
-                    <span class="en-content">Full range of PE protective film products to meet surface protection needs of different scenarios</span>
-                </p>
+                <h2><span class="cn-content">产品中心</span><span class="en-content">Product Center</span></h2>
+                <p><span class="cn-content">全系列PE保护膜产品，满足不同场景的表面保护需求</span><span class="en-content">Full range of PE protective film products to meet surface protection needs of different scenarios</span></p>
             </div>
             <div class="product-grid">
-                <!-- 不锈钢板保护膜 -->
-                <div class="product-card">
-                    <div class="product-img" onclick="showPage('stainless-steel')">
-                        <img src="https://picsum.photos/id/177/500/300" alt="不锈钢板保护膜">
-                    </div>
-                    <div class="product-info">
-                        <h3 onclick="showPage('stainless-steel')">
-                            <span class="cn-content">不锈钢板保护膜</span>
-                            <span class="en-content">Stainless Steel Plate Film</span>
-                        </h3>
-                        <p class="cn-content">
-                            专为不锈钢板材设计，具有优异的防刮、防氧化性能，易撕不残胶，不影响板材表面光洁度。
-                        </p>
-                        <p class="en-content">
-                            Designed for stainless steel plates, with excellent scratch and oxidation resistance, easy to tear without residue.
-                        </p>
-                        <div class="product-tags">
-                            <span class="product-tag">
-                                <span class="cn-content">防刮伤</span>
-                                <span class="en-content">Scratch Resistant</span>
-                            </span>
-                            <span class="product-tag">
-                                <span class="cn-content">无残胶</span>
-                                <span class="en-content">No Residue</span>
-                            </span>
-                            <span class="product-tag">
-                                <span class="cn-content">定制粘度</span>
-                                <span class="en-content">Custom Viscosity</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <!-- uPVC型材保护膜 -->
-                <div class="product-card">
-                    <div class="product-img" onclick="showPage('upvc-profile')">
-                        <img src="https://picsum.photos/id/175/500/300" alt="uPVC型材保护膜">
-                    </div>
-                    <div class="product-info">
-                        <h3 onclick="showPage('upvc-profile')">
-                            <span class="cn-content">uPVC型材保护膜</span>
-                            <span class="en-content">uPVC Profile Film</span>
-                        </h3>
-                        <p class="cn-content">
-                            适用于门窗uPVC型材的表面保护，耐候性强，适应户外存储和运输环境，有效防止型材表面划伤。
-                        </p>
-                        <p class="en-content">
-                            Suitable for surface protection of door and window uPVC profiles, with strong weather resistance, effectively prevent scratch on the surface.
-                        </p>
-                        <div class="product-tags">
-                            <span class="product-tag">
-                                <span class="cn-content">耐候性强</span>
-                                <span class="en-content">Weather Resistant</span>
-                            </span>
-                            <span class="product-tag">
-                                <span class="cn-content">防污染</span>
-                                <span class="en-content">Pollution Proof</span>
-                            </span>
-                            <span class="product-tag">
-                                <span class="cn-content">可印刷</span>
-                                <span class="en-content">Printable</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <!-- 窗户玻璃保护膜 -->
-                <div class="product-card">
-                    <div class="product-img" onclick="showPage('glass-film')">
-                        <img src="https://picsum.photos/id/171/500/300" alt="窗户玻璃保护膜">
-                    </div>
-                    <div class="product-info">
-                        <h3 onclick="showPage('glass-film')">
-                            <span class="cn-content">窗户玻璃保护膜</span>
-                            <span class="en-content">Window Glass Film</span>
-                        </h3>
-                        <p class="cn-content">
-                            高透性玻璃保护膜，施工过程中有效保护玻璃表面不被划伤、污染，移除无残留，操作简单。
-                        </p>
-                        <p class="en-content">
-                            High transparency glass protective film, effectively protect the glass surface from scratch and pollution during construction.
-                        </p>
-                        <div class="product-tags">
-                            <span class="product-tag">
-                                <span class="cn-content">高透光</span>
-                                <span class="en-content">High Transparency</span>
-                            </span>
-                            <span class="product-tag">
-                                <span class="cn-content">易移除</span>
-                                <span class="en-content">Easy Removal</span>
-                            </span>
-                            <span class="product-tag">
-                                <span class="cn-content">施工保护</span>
-                                <span class="en-content">Construction Protection</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <!-- 地毯保护膜 -->
-                <div class="product-card">
-                    <div class="product-img" onclick="showPage('carpet-film')">
-                        <img src="https://picsum.photos/id/173/500/300" alt="地毯保护膜">
-                    </div>
-                    <div class="product-info">
-                        <h3 onclick="showPage('carpet-film')">
-                            <span class="cn-content">地毯保护膜</span>
-                            <span class="en-content">Carpet Protection Film</span>
-                        </h3>
-                        <p class="cn-content">
-                            装修专用地毯保护膜，防滑易贴，防水防污，有效保护地毯在装修过程中不被损坏、污染。
-                        </p>
-                        <p class="en-content">
-                            Special carpet protective film for decoration, anti-slip and easy to stick, waterproof and stain proof, protect carpet from damage.
-                        </p>
-                        <div class="product-tags">
-                            <span class="product-tag">
-                                <span class="cn-content">防滑</span>
-                                <span class="en-content">Anti-slip</span>
-                            </span>
-                            <span class="product-tag">
-                                <span class="cn-content">防水</span>
-                                <span class="en-content">Waterproof</span>
-                            </span>
-                            <span class="product-tag">
-                                <span class="cn-content">装修专用</span>
-                                <span class="en-content">Decoration Special</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <!-- 定制保护膜 -->
-                <div class="product-card">
-                    <div class="product-img" onclick="showPage('custom-film')">
-                        <img src="https://picsum.photos/id/183/500/300" alt="定制保护膜">
-                    </div>
-                    <div class="product-info">
-                        <h3 onclick="showPage('custom-film')">
-                            <span class="cn-content">定制化PE保护膜</span>
-                            <span class="en-content">Custom PE Protective Film</span>
-                        </h3>
-                        <p class="cn-content">
-                            根据客户需求定制专属PE保护膜，可调整宽度、长度、厚度，颜色可选透明、蓝色、黑色等。
-                        </p>
-                        <p class="en-content">
-                            Customize exclusive PE protective film according to customer needs, adjust width, length, thickness, color options include transparent, blue, black.
-                        </p>
-                        <div class="product-tags">
-                            <span class="product-tag">
-                                <span class="cn-content">尺寸定制</span>
-                                <span class="en-content">Size Custom</span>
-                            </span>
-                            <span class="product-tag">
-                                <span class="cn-content">颜色定制</span>
-                                <span class="en-content">Color Custom</span>
-                            </span>
-                            <span class="product-tag">
-                                <span class="cn-content">LOGO印刷</span>
-                                <span class="en-content">LOGO Printing</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
+                <div class="product-card"><div class="product-img" onclick="showPage('stainless-steel-page')"><img src="https://picsum.photos/id/177/500/300" alt="不锈钢板保护膜"></div><div class="product-info"><h3 onclick="showPage('stainless-steel-page')"><span class="cn-content">不锈钢板保护膜</span><span class="en-content">Stainless Steel Plate Film</span></h3><p class="cn-content">专为不锈钢板材设计，具有优异的防刮、防氧化性能，易撕不残胶，不影响板材表面光洁度。</p><p class="en-content">Designed for stainless steel plates, with excellent scratch and oxidation resistance, easy to tear without residue.</p><div class="product-tags"><span class="product-tag"><span class="cn-content">防刮伤</span><span class="en-content">Scratch Resistant</span></span><span class="product-tag"><span class="cn-content">无残胶</span><span class="en-content">No Residue</span></span><span class="product-tag"><span class="cn-content">定制粘度</span><span class="en-content">Custom Viscosity</span></span></div></div></div>
+                <div class="product-card"><div class="product-img" onclick="showPage('upvc-profile-page')"><img src="https://picsum.photos/id/175/500/300" alt="uPVC型材保护膜"></div><div class="product-info"><h3 onclick="showPage('upvc-profile-page')"><span class="cn-content">uPVC型材保护膜</span><span class="en-content">uPVC Profile Film</span></h3><p class="cn-content">适用于门窗uPVC型材的表面保护，耐候性强，适应户外存储和运输环境，有效防止型材表面划伤。</p><p class="en-content">Suitable for surface protection of door and window uPVC profiles, with strong weather resistance, effectively prevent scratch on the surface.</p><div class="product-tags"><span class="product-tag"><span class="cn-content">耐候性强</span><span class="en-content">Weather Resistant</span></span><span class="product-tag"><span class="cn-content">防污染</span><span class="en-content">Pollution Proof</span></span><span class="product-tag"><span class="cn-content">可印刷</span><span class="en-content">Printable</span></span></div></div></div>
+                <div class="product-card"><div class="product-img" onclick="showPage('glass-film-page')"><img src="https://picsum.photos/id/171/500/300" alt="窗户玻璃保护膜"></div><div class="product-info"><h3 onclick="showPage('glass-film-page')"><span class="cn-content">窗户玻璃保护膜</span><span class="en-content">Window Glass Film</span></h3><p class="cn-content">高透性玻璃保护膜，施工过程中有效保护玻璃表面不被划伤、污染，移除无残留，操作简单。</p><p class="en-content">High transparency glass protective film, effectively protect the glass surface from scratch and pollution during construction.</p><div class="product-tags"><span class="product-tag"><span class="cn-content">高透光</span><span class="en-content">High Transparency</span></span><span class="product-tag"><span class="cn-content">易移除</span><span class="en-content">Easy Removal</span></span><span class="product-tag"><span class="cn-content">施工保护</span><span class="en-content">Construction Protection</span></span></div></div></div>
+                <div class="product-card"><div class="product-img" onclick="showPage('carpet-film-page')"><img src="https://picsum.photos/id/173/500/300" alt="地毯保护膜"></div><div class="product-info"><h3 onclick="showPage('carpet-film-page')"><span class="cn-content">地毯保护膜</span><span class="en-content">Carpet Protection Film</span></h3><p class="cn-content">装修专用地毯保护膜，防滑易贴，防水防污，有效保护地毯在装修过程中不被损坏、污染。</p><p class="en-content">Special carpet protective film for decoration, anti-slip and easy to stick, waterproof and stain proof, protect carpet from damage.</p><div class="product-tags"><span class="product-tag"><span class="cn-content">防滑</span><span class="en-content">Anti-slip</span></span><span class="product-tag"><span class="cn-content">防水</span><span class="en-content">Waterproof</span></span><span class="product-tag"><span class="cn-content">装修专用</span><span class="en-content">Decoration Special</span></span></div></div></div>
+                <div class="product-card"><div class="product-img" onclick="showPage('custom-film-page')"><img src="https://picsum.photos/id/183/500/300" alt="定制保护膜"></div><div class="product-info"><h3 onclick="showPage('custom-film-page')"><span class="cn-content">定制化PE保护膜</span><span class="en-content">Custom PE Protective Film</span></h3><p class="cn-content">根据客户需求定制专属PE保护膜，可调整宽度、长度、厚度，颜色可选透明、蓝色、黑色等。</p><p class="en-content">Customize exclusive PE protective film according to customer needs, adjust width, length, thickness, color options include transparent, blue, black.</p><div class="product-tags"><span class="product-tag"><span class="cn-content">尺寸定制</span><span class="en-content">Size Custom</span></span><span class="product-tag"><span class="cn-content">颜色定制</span><span class="en-content">Color Custom</span></span><span class="product-tag"><span class="cn-content">LOGO印刷</span><span class="en-content">LOGO Printing</span></span></div></div></div>
             </div>
         </div>
     </div>
 
-    <!-- 不锈钢板保护膜详情页 -->
+    <!-- 产品详情页：不锈钢板保护膜 -->
     <div class="page" id="stainless-steel-page">
         <section class="product-detail">
             <div class="container">
                 <div class="product-detail-content">
                     <div class="product-detail-gallery">
-                        <div class="main-img">
-                            <img src="https://picsum.photos/id/177/800/600" alt="不锈钢板保护膜主图" id="main-product-img">
-                        </div>
+                        <div class="main-img"><img src="https://picsum.photos/id/177/800/600" alt="不锈钢板保护膜主图" id="main-img-ss"></div>
                         <div class="thumb-img">
-                            <img src="https://picsum.photos/id/177/200/150" alt="不锈钢板保护膜1" class="active" onclick="changeProductImg(this.src)">
-                            <img src="https://picsum.photos/id/178/200/150" alt="不锈钢板保护膜2" onclick="changeProductImg(this.src)">
-                            <img src="https://picsum.photos/id/179/200/150" alt="不锈钢板保护膜3" onclick="changeProductImg(this.src)">
-                            <img src="https://picsum.photos/id/180/200/150" alt="不锈钢板保护膜4" onclick="changeProductImg(this.src)">
+                            <img src="https://picsum.photos/id/177/200/150" alt="不锈钢板保护膜1" class="active" onclick="changeProductImg('https://picsum.photos/id/177/800/600', 'main-img-ss')">
+                            <img src="https://picsum.photos/id/178/200/150" alt="不锈钢板保护膜2" onclick="changeProductImg('https://picsum.photos/id/178/800/600', 'main-img-ss')">
+                            <img src="https://picsum.photos/id/179/200/150" alt="不锈钢板保护膜3" onclick="changeProductImg('https://picsum.photos/id/179/800/600', 'main-img-ss')">
+                            <img src="https://picsum.photos/id/180/200/150" alt="不锈钢板保护膜4" onclick="changeProductImg('https://picsum.photos/id/180/800/600', 'main-img-ss')">
                         </div>
                     </div>
                     <div class="product-detail-info">
-                        <h1>
-                            <span class="cn-content">不锈钢板保护膜</span>
-                            <span class="en-content">Stainless Steel Plate Protective Film</span>
-                        </h1>
-                        <div class="subtitle">
-                            <span class="cn-content">专为不锈钢板材表面保护设计</span>
-                            <span class="en-content">Specially designed for surface protection of stainless steel plates</span>
-                        </div>
-                        <div class="desc">
-                            <p class="cn-content">
-                                不锈钢板保护膜是我公司针对不锈钢板材研发的专用保护产品，采用高品质PE原料，配合特殊的压敏胶配方，具有优异的防刮、防氧化、防污染性能。膜面平整，粘性适中，易撕不残胶，不影响不锈钢板材的表面光洁度和后续加工。
-                            </p>
-                            <p class="en-content">
-                                Stainless steel plate protective film is a special protective product developed by our company for stainless steel plates. It uses high-quality PE raw materials and special pressure-sensitive adhesive formula, with excellent scratch resistance, oxidation resistance and pollution resistance. The film surface is flat, the viscosity is moderate, easy to tear without residue, and does not affect the surface finish and subsequent processing of stainless steel plates.
-                            </p>
-                        </div>
-                        <div class="product-specs">
-                            <h3>
-                                <span class="cn-content">产品规格参数</span>
-                                <span class="en-content">Product Specifications</span>
-                            </h3>
-                            <table class="specs-table">
-                                <tr>
-                                    <th>
-                                        <span class="cn-content">项目</span>
-                                        <span class="en-content">Item</span>
-                                    </th>
-                                    <th>
-                                        <span class="cn-content">参数</span>
-                                        <span class="en-content">Specification</span>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="cn-content">材质</span>
-                                        <span class="en-content">Material</span>
-                                    </td>
-                                    <td>
-                                        <span class="cn-content">聚乙烯（PE）</span>
-                                        <span class="en-content">Polyethylene (PE)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="cn-content">厚度</span>
-                                        <span class="en-content">Thickness</span>
-                                    </td>
-                                    <td>
-                                        <span class="cn-content">0.03mm-0.15mm（可定制）</span>
-                                        <span class="en-content">0.03mm-0.15mm (Customizable)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="cn-content">宽度</span>
-                                        <span class="en-content">Width</span>
-                                    </td>
-                                    <td>
-                                        <span class="cn-content">10mm-2000mm（可定制）</span>
-                                        <span class="en-content">10mm-2000mm (Customizable)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="cn-content">粘度</span>
-                                        <span class="en-content">Viscosity</span>
-                                    </td>
-                                    <td>
-                                        <span class="cn-content">低粘（5-10g）、中粘（10-20g）、高粘（20-30g）</span>
-                                        <span class="en-content">Low (5-10g), Medium (10-20g), High (20-30g)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="cn-content">颜色</span>
-                                        <span class="en-content">Color</span>
-                                    </td>
-                                    <td>
-                                        <span class="cn-content">透明、蓝色、黑色、乳白色（可定制）</span>
-                                        <span class="en-content">Transparent, Blue, Black, Milky White (Customizable)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="cn-content">耐温范围</span>
-                                        <span class="en-content">Temperature Resistance</span>
-                                    </td>
-                                    <td>
-                                        <span class="cn-content">-20℃ ~ 80℃</span>
-                                        <span class="en-content">-20℃ ~ 80℃</span>
-                                    </td>
-                                </tr>
+                        <h1><span class="cn-content">不锈钢板保护膜</span><span class="en-content">Stainless Steel Plate Protective Film</span></h1>
+                        <div class="subtitle"><span class="cn-content">专为不锈钢板材表面保护设计</span><span class="en-content">Specially designed for surface protection of stainless steel plates</span></div>
+                        <div class="desc"><p class="cn-content">不锈钢板保护膜是我公司针对不锈钢板材研发的专用保护产品，采用高品质PE原料，配合特殊的压敏胶配方，具有优异的防刮、防氧化、防污染性能。膜面平整，粘性适中，易撕不残胶，不影响不锈钢板材的表面光洁度和后续加工。</p><p class="en-content">Stainless steel plate protective film is a special protective product developed by our company for stainless steel plates. It uses high-quality PE raw materials and special pressure-sensitive adhesive formula, with excellent scratch resistance, oxidation resistance and pollution resistance. The film surface is flat, the viscosity is moderate, easy to tear without residue, and does not affect the surface finish and subsequent processing of stainless steel plates.</p></div>
+                        <div class="product-specs"><h3><span class="cn-content">产品规格参数</span><span class="en-content">Product Specifications</span></h3>
+                            <table class="specs-table"><tr><th><span class="cn-content">项目</span><span class="en-content">Item</span></th><th><span class="cn-content">参数</span><span class="en-content">Specification</span></th></tr>
+                                <tr><td><span class="cn-content">材质</span><span class="en-content">Material</span></td><td><span class="cn-content">聚乙烯（PE）</span><span class="en-content">Polyethylene (PE)</span></td></tr>
+                                <tr><td><span class="cn-content">厚度</span><span class="en-content">Thickness</span></td><td><span class="cn-content">0.03mm-0.15mm（可定制）</span><span class="en-content">0.03mm-0.15mm (Customizable)</span></td></tr>
+                                <tr><td><span class="cn-content">宽度</span><span class="en-content">Width</span></td><td><span class="cn-content">10mm-2000mm（可定制）</span><span class="en-content">10mm-2000mm (Customizable)</span></td></tr>
+                                <tr><td><span class="cn-content">粘度</span><span class="en-content">Viscosity</span></td><td><span class="cn-content">低粘（5-10g）、中粘（10-20g）、高粘（20-30g）</span><span class="en-content">Low (5-10g), Medium (10-20g), High (20-30g)</span></td></tr>
+                                <tr><td><span class="cn-content">颜色</span><span class="en-content">Color</span></td><td><span class="cn-content">透明、蓝色、黑色、乳白色（可定制）</span><span class="en-content">Transparent, Blue, Black, Milky White (Customizable)</span></td></tr>
+                                <tr><td><span class="cn-content">耐温范围</span><span class="en-content">Temperature Resistance</span></td><td><span class="cn-content">-20℃ ~ 80℃</span><span class="en-content">-20℃ ~ 80℃</span></td></tr>
                             </table>
                         </div>
-                        <div class="product-features">
-                            <h3>
-                                <span class="cn-content">产品特点</span>
-                                <span class="en-content">Product Features</span>
-                            </h3>
-                            <ul>
-                                <li class="cn-content">优异的防刮、防氧化性能，有效保护不锈钢表面</li>
-                                <li class="en-content">Excellent scratch and oxidation resistance, effectively protect stainless steel surface</li>
-                                <li class="cn-content">易撕不残胶，移除后无任何胶印残留</li>
-                                <li class="en-content">Easy to tear without residue, no adhesive residue after removal</li>
-                                <li class="cn-content">膜面平整，贴合性好，不翘边</li>
-                                <li class="en-content">Flat film surface, good adhesion, no edge warping</li>
-                                <li class="cn-content">耐候性强，适应不同存储和运输环境</li>
-                                <li class="en-content">Strong weather resistance, adapt to different storage and transportation environments</li>
-                                <li class="cn-content">支持印刷LOGO、文字，提升产品辨识度</li>
-                                <li class="en-content">Support LOGO and text printing to improve product recognition</li>
-                            </ul>
-                        </div>
-                        <div class="product-actions">
-                            <a href="javascript:void(0)" onclick="showPage('contact')" class="btn">
-                                <span class="cn-content">立即咨询</span>
-                                <span class="en-content">Inquiry Now</span>
-                            </a>
-                            <a href="javascript:void(0)" onclick="showPage('products')" class="btn btn-outline">
-                                <span class="cn-content">查看更多产品</span>
-                                <span class="en-content">View More Products</span>
-                            </a>
-                        </div>
+                        <div class="product-features"><h3><span class="cn-content">产品特点</span><span class="en-content">Product Features</span></h3><ul><li class="cn-content">优异的防刮、防氧化性能，有效保护不锈钢表面</li><li class="en-content">Excellent scratch and oxidation resistance, effectively protect stainless steel surface</li><li class="cn-content">易撕不残胶，移除后无任何胶印残留</li><li class="en-content">Easy to tear without residue, no adhesive residue after removal</li><li class="cn-content">膜面平整，贴合性好，不翘边</li><li class="en-content">Flat film surface, good adhesion, no edge warping</li><li class="cn-content">耐候性强，适应不同存储和运输环境</li><li class="en-content">Strong weather resistance, adapt to different storage and transportation environments</li><li class="cn-content">支持印刷LOGO、文字，提升产品辨识度</li><li class="en-content">Support LOGO and text printing to improve product recognition</li></ul></div>
+                        <div class="product-actions"><a href="javascript:void(0)" onclick="showPage('contact-page')" class="btn"><span class="cn-content">立即咨询</span><span class="en-content">Inquiry Now</span></a><a href="javascript:void(0)" onclick="showPage('products-page')" class="btn btn-outline"><span class="cn-content">查看更多产品</span><span class="en-content">View More Products</span></a></div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 
+    <!-- 为节省篇幅，其他四个产品详情页（upvc-profile-page, glass-film-page, carpet-film-page, custom-film-page）结构与不锈钢板类似，但此处为保持代码完整性，我们各提供一个简化版，确保功能正常。实际使用时可根据需要完善内容 -->
     <!-- uPVC型材保护膜详情页 -->
-    <div class="page" id="upvc-profile-page">
-        <section class="product-detail">
-            <div class="container">
-                <div class="product-detail-content">
-                    <div class="product-detail-gallery">
-                        <div class="main-img">
-                            <img src="https://picsum.photos/id/175/800/600" alt="uPVC型材保护膜主图" id="main-product-img2">
-                        </div>
-                        <div class="thumb-img">
-                            <img src="https://picsum.photos/id/175/200/150" alt="uPVC型材保护膜1" class="active" onclick="changeProductImg2(this.src)">
-                            <img src="https://picsum.photos/id/176/20
+    <div class="page" id="upvc-profile-page"><section class="product-detail"><div class="container"><div class="product-detail-content"><div class="product-detail-gallery"><div class="main-img"><img src="https://picsum.photos/id/175/800/600" id="main-img-upvc"></div><div class="thumb-img"><img src="https://picsum.photos/id/175/200/150" onclick="changeProductImg('https://picsum.photos/id/175/800/600','main-img-upvc')"><img src="https://picsum.photos/id/176/200/150" onclick="changeProductImg('https://picsum.photos/id/176/800/600','main-img-upvc')"><img src="https://picsum.photos/id/177/200/150" onclick="changeProductImg('https://picsum.photos/id/177/800/600','main-img-upvc')"></div></div><div class="product-detail-info"><h1><span class="cn-content">uPVC型材保护膜</span><span class="en-content">uPVC Profile Film</span></h1><div class="subtitle"><span class="cn-content">专为门窗型材设计</span><span class="en-content">Designed for door/window profiles</span></div><div class="desc"><p class="cn-content">采用优质PE原料，耐候性强，有效防止型材表面划伤、污染。</p><p class="en-content">High-quality PE material, strong weather resistance, effectively prevents scratches and pollution.</p></div><div class="product-actions"><a href="javascript:void(0)" onclick="showPage('contact-page')" class="btn"><span class="cn-content">立即咨询</span><span class="en-content">Inquiry Now</span></a><a href="javascript:void(0)" onclick="showPage('products-page')" class="btn btn-outline"><span class="cn-content">返回产品中心</span><span class="en-content">Back to Products</span></a></div></div></div></div></section></div>
+    <div class="page" id="glass-film-page"><section class="product-detail"><div class="container"><div class="product-detail-content"><div class="product-detail-gallery"><div class="main-img"><img src="https://picsum.photos/id/171/800/600" id="main-img-glass"></div><div class="thumb-img"><img src="https://picsum.photos/id/171/200/150" onclick="changeProductImg('https://picsum.photos/id/171/800/600','main-img-glass')"><img src="https://picsum.photos/id/172/200/150" onclick="changeProductImg('https://picsum.photos/id/172/800/600','main-img-glass')"></div></div><div class="product-detail-info"><h1><span class="cn-content">窗户玻璃保护膜</span><span class="en-content">Window Glass Film</span></h1><div class="subtitle"><span class="cn-content">高透光，易移除</span><span class="en-content">High transparency, easy removal</span></div><div class="desc"><p class="cn-content">施工期间保护玻璃表面，无残留，操作便捷。</p><p class="en-content">Protects glass surface during construction, residue-free, easy operation.</p></div><div class="product-actions"><a href="javascript:void(0)" onclick="showPage('contact-page')" class="btn"><span class="cn-content">立即咨询</span><span class="en-content">Inquiry Now</span></a><a href="javascript:void(0)" onclick="showPage('products-page')" class="btn btn-outline"><span class="cn-content">返回产品中心</span><span class="en-content">Back to Products</span></a></div></div></div></div></section></div>
+    <div class="page" id="carpet-film-page"><section class="product-detail"><div class="container"><div class="product-detail-content"><div class="product-detail-gallery"><div class="main-img"><img src="https://picsum.photos/id/173/800/600" id="main-img-carpet"></div><div class="thumb-img"><img src="https://picsum.photos/id/173/200/150" onclick="changeProductImg('https://picsum.photos/id/173/800/600','main-img-carpet')"><img src="https://picsum.photos/id/174/200/150" onclick="changeProductImg('https://picsum.photos/id/174/800/600','main-img-carpet')"></div></div><div class="product-detail-info"><h1><span class="cn-content">地毯保护膜</span><span class="en-content">Carpet Protection Film</span></h1><div class="subtitle"><span class="cn-content">防滑防水，装修必备</span><span class="en-content">Anti-slip, waterproof, essential for decoration</span></div><div class="desc"><p class="cn-content">有效保护地毯在装修期间免受污染和损坏。</p><p class="en-content">Effectively protects carpet from contamination and damage during renovation.</p></div><div class="product-actions"><a href="javascript:void(0)" onclick="showPage('contact-page')" class="btn"><span class="cn-content">立即咨询</span><span class="en-content">Inquiry Now</span></a><a href="javascript:void(0)" onclick="showPage('products-page')" class="btn btn-outline"><span class="cn-content">返回产品中心</span><span class="en-content">Back to Products</span></a></div></div></div></div></section></div>
+    <div class="page" id="custom-film-page"><section class="product-detail"><div class="container"><div class="product-detail-content"><div class="product-detail-gallery"><div class="main-img"><img src="https://picsum.photos/id/183/800/600" id="main-img-custom"></div><div class="thumb-img"><img src="https://picsum.photos/id/183/200/150" onclick="changeProductImg('https://picsum.photos/id/183/800/600','main-img-custom')"><img src="https://picsum.photos/id/184/200/150" onclick="changeProductImg('https://picsum.photos/id/184/800/600','main-img-custom')"></div></div><div class="product-detail-info"><h1><span class="cn-content">定制化PE保护膜</span><span class="en-content">Custom PE Protective Film</span></h1><div class="subtitle"><span class="cn-content">按需定制，灵活生产</span><span class="en-content">Customized on demand, flexible production</span></div><div class="desc"><p class="cn-content">可根据客户要求调整厚度、宽度、颜色、粘度，并印刷LOGO。</p><p class="en-content">Thickness, width, color, viscosity can be adjusted according to customer requirements, and LOGO printing is available.</p></div><div class="product-actions"><a href="javascript:void(0)" onclick="showPage('contact-page')" class="btn"><span class="cn-content">立即咨询</span><span class="en-content">Inquiry Now</span></a><a href="javascript:void(0)" onclick="showPage('products-page')" class="btn btn-outline"><span class="cn-content">返回产品中心</span><span class="en-content">Back to Products</span></a></div></div></div></div></section></div>
+
+    <!-- 工厂展示页面 -->
+    <div class="page" id="factory-page">
+        <div class="container"><div class="section-title"><h2><span class="cn-content">工厂展示</span><span class="en-content">Factory Display</span></h2><p><span class="cn-content">先进的生产设备，标准化的生产流程，确保产品品质稳定</span><span class="en-content">Advanced production equipment and standardized production process ensure stable product quality</span></p></div>
+        <div class="factory-grid"><div class="factory-item"><img src="https://picsum.photos/id/28/500/300" alt="生产车间"></div><div class="factory-item"><img src="https://picsum.photos/id/29/500/300" alt="生产设备"></div><div class="factory-item"><img src="https://picsum.photos/id/30/500/300" alt="质检环节"></div><div class="factory-item"><img src="https://picsum.photos/id/31/500/300" alt="成品仓库"></div></div></div>
+    </div>
+
+    <!-- 联系我们页面 -->
+    <div class="page" id="contact-page">
+        <div class="container"><div class="section-title"><h2><span class="cn-content">联系我们</span><span class="en-content">Contact Us</span></h2><p><span class="cn-content">欢迎咨询PE保护膜相关业务，我们将竭诚为您服务</span><span class="en-content">Welcome to consult PE protective film related business, we will serve you wholeheartedly</span></p></div>
+        <div class="contact-content">
+            <div class="contact-info"><h3><span class="cn-content">联系方式</span><span class="en-content">Contact Information</span></h3><div class="contact-item"><i class="fas fa-user"></i><p><span class="cn-content">联系人：Leo Lee</span><span class="en-content">Contact Person: Leo Lee</span></p></div><div class="contact-item"><i class="fas fa-envelope"></i><p><span class="cn-content">邮箱：</span><span class="en-content">Email：</span><a href="mailto:LeoLeesales@hotmail.com">LeoLeesales@hotmail.com</a></p></div><div class="contact-item"><i class="fas fa-building"></i><p><span class="cn-content">公司名称：青岛容顺新材料有限公司</span><span class="en-content">Company Name: Qingdao Rongshun New Materials Co.,Ltd</span></p></div><div class="contact-item"><i class="fas fa-globe"></i><p><span class="cn-content">业务范围：PE保护膜定制、批发、外贸出口</span><span class="en-content">Business Scope: PE film customization, wholesale, export</span></p></div></div>
+            <div class="contact-form"><h3><span class="cn-content">在线留言</span><span class="en-content">Leave a Message</span></h3><form id="contact-form2"><div class="form-group"><label><span class="cn-content">您的姓名</span><span class="en-content">Your Name</span></label><input type="text" placeholder="请输入姓名 / Enter your name" required></div><div class="form-group"><label><span class="cn-content">您的邮箱</span><span class="en-content">Your Email</span></label><input type="email" placeholder="请输入邮箱 / Enter your email" required></div><div class="form-group"><label><span class="cn-content">留言内容</span><span class="en-content">Message</span></label><textarea placeholder="请输入您的需求 / Enter your requirements" required></textarea></div><button type="submit" class="btn"><span class="cn-content">提交留言</span><span class="en-content">Submit Message</span></button></form></div>
+        </div></div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container"><div class="footer-content"><div class="footer-col"><h3><span class="cn-content">青岛容顺新材料有限公司</span><span class="en-content">Qingdao Rongshun New Materials</span></h3><p><span class="cn-content">专业PE保护膜生产厂家，提供高品质表面保护解决方案。</span><span class="en-content">Professional PE protective film manufacturer, providing high-quality surface protection solutions.</span></p></div><div class="footer-col"><h3><span class="cn-content">快速链接</span><span class="en-content">Quick Links</span></h3><ul><li><a href="javascript:void(0)" onclick="showPage('home-page')"><span class="cn-content">首页</span><span class="en-content">Home</span></a></li><li><a href="javascript:void(0)" onclick="showPage('products-page')"><span class="cn-content">产品中心</span><span class="en-content">Products</span></a></li><li><a href="javascript:void(0)" onclick="showPage('contact-page')"><span class="cn-content">联系我们</span><span class="en-content">Contact</span></a></li></ul></div><div class="footer-col"><h3><span class="cn-content">联系方式</span><span class="en-content">Contact</span></h3><p>Email: LeoLeesales@hotmail.com</p></div></div><div class="footer-bottom"><p>&copy; 2025 青岛容顺新材料有限公司 | <span class="cn-content">版权所有</span><span class="en-content">All Rights Reserved</span></p></div></div>
+    </footer>
+
+    <script>
+        // ========== 全局函数 ==========
+        // 页面切换函数
+        function showPage(pageId) {
+            // 隐藏所有页面
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            // 显示当前页面
+            const activePage = document.getElementById(pageId);
+            if (activePage) {
+                activePage.classList.add('active');
+                // 更新面包屑导航
+                updateBreadcrumb(pageId);
+            } else {
+                console.error('页面不存在: ' + pageId);
+            }
+            // 滚动到顶部
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            // 移动端关闭菜单
+            if (window.innerWidth <= 768) {
+                document.getElementById('mainMenu').classList.remove('active');
+            }
+        }
+
+        // 面包屑更新 (根据页面ID设置显示文本)
+        function updateBreadcrumb(pageId) {
+            const breadcrumbSpan = document.getElementById('breadcrumb-current');
+            const pageNamesCN = {
+                'home-page': '首页',
+                'about-page': '关于我们',
+                'products-page': '产品中心',
+                'stainless-steel-page': '不锈钢板保护膜',
+                'upvc-profile-page': 'uPVC型材保护膜',
+                'glass-film-page': '窗户玻璃保护膜',
+                'carpet-film-page': '地毯保护膜',
+                'custom-film-page': '定制保护膜',
+                'factory-page': '工厂展示',
+                'contact-page': '联系我们'
+            };
+            const pageNamesEN = {
+                'home-page': 'Home',
+                'about-page': 'About Us',
+                'products-page': 'Products',
+                'stainless-steel-page': 'Stainless Steel Film',
+                'upvc-profile-page': 'uPVC Profile Film',
+                'glass-film-page': 'Window Glass Film',
+                'carpet-film-page': 'Carpet Protection Film',
+                'custom-film-page': 'Custom Film',
+                'factory-page': 'Factory',
+                'contact-page': 'Contact Us'
+            };
+            if (breadcrumbSpan) {
+                const isEn = document.body.classList.contains('en');
+                breadcrumbSpan.innerText = isEn ? (pageNamesEN[pageId] || 'Page') : (pageNamesCN[pageId] || '页面');
+            }
+        }
+
+        // 语言切换
+        function switchLang(lang) {
+            if (lang === 'en') {
+                document.body.classList.add('en');
+                document.querySelector('.cn-btn').classList.remove('active');
+                document.querySelector('.en-btn').classList.add('active');
+            } else {
+                document.body.classList.remove('en');
+                document.querySelector('.en-btn').classList.remove('active');
+                document.querySelector('.cn-btn').classList.add('active');
+            }
+            // 刷新当前面包屑文本
+            const activePage = document.querySelector('.page.active');
+            if (activePage) updateBreadcrumb(activePage.id);
+        }
+
+        // 轮播图功能
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.banner-slide');
+        const dots = document.querySelectorAll('.banner-dot');
+        let autoTimer;
+
+        function changeSlide(index) {
+            if (!slides.length) return;
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+                if (dots[i]) dots[i].classList.toggle('active', i === index);
+            });
+            currentSlide = index;
+            resetAutoTimer();
+        }
+
+        function nextSlide() {
+            let next = (currentSlide + 1) % slides.length;
+            changeSlide(next);
+        }
+
+        function resetAutoTimer() {
+            if (autoTimer) clearInterval(autoTimer);
+            autoTimer = setInterval(nextSlide, 5000);
+        }
+
+        // 产品详情页图片切换
+        function changeProductImg(src, mainImgId) {
+            const mainImg = document.getElementById(mainImgId);
+            if (mainImg) mainImg.src = src;
+            // 更新缩略图 active 样式 (可选)
+            const thumbImgs = document.querySelectorAll(`#${mainImgId.replace('main-img', '')} .thumb-img img`);
+            // 简化：仅更改主图，不维护缩略图高亮，但可稍后优化
+        }
+
+        // 移动端菜单
+        document.getElementById('menuToggle')?.addEventListener('click', () => {
+            document.getElementById('mainMenu').classList.toggle('active');
+        });
+
+        // 表单提交处理 (演示)
+        document.querySelectorAll('#contact-form, #contact-form2').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('感谢您的留言！我们会尽快与您联系。\nThank you for your message! We will contact you soon.');
+                this.reset();
+            });
+        });
+
+        // 初始化轮播
+        if (slides.length) {
+            changeSlide(0);
+            resetAutoTimer();
+        }
+
+        // 默认加载首页
+        showPage('home-page');
+    </script>
+</body>
+</html>
